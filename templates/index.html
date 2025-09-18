@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Analisis Angka</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Analisis Angka</h1>
+            <form method="POST">
+                <label for="angka"
+                    >Masukkan angka (pisahkan dengan spasi):</label
+                >
+                <input
+                    type="text"
+                    id="angka"
+                    name="angka"
+                    placeholder="Contoh: 10 20 30 40"
+                    required
+                />
+                <button type="submit">Analisis</button>
+            </form>
+
+            {% if hasil %}
+            <div class="results">
+                <div class="card">
+                    <h3>Rata-rata</h3>
+                    <p>{{ hasil.rata }}</p>
+                </div>
+                <div class="card">
+                    <h3>Median</h3>
+                    <p>{{ hasil.median }}</p>
+                </div>
+                <div class="card">
+                    <h3>Modus</h3>
+                    <p>{{ hasil.modus }}</p>
+                </div>
+                <div class="card">
+                    <h3>Nilai Terbesar</h3>
+                    <p>{{ hasil.max }}</p>
+                </div>
+                <div class="card">
+                    <h3>Nilai Terkecil</h3>
+                    <p>{{ hasil.min }}</p>
+                </div>
+                <div class="card">
+                    <h3>Range</h3>
+                    <p>{{ hasil.range }}</p>
+                </div>
+                <div class="card">
+                    <h3>Standar Deviasi</h3>
+                    <p>{{ hasil.std }}</p>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>

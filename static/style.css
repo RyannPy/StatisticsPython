@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0f0f10; /* hitam keabu-abuan */
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1a1a1d; /* abu gelap */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c084fc; /* ungu lembut */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #444;
+    background: #111;
+    color: #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background: linear-gradient(135deg, #6d28d9, #9333ea); /* gradasi ungu */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.5);
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #1f1f23;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.4);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #e9d5ff; /* ungu muda */
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #c084fc; /* ungu lembut */
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    button {
+        font-size: 14px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
